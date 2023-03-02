@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #fff;
+  background-image: url('https://images.pexels.com/photos/950902/pexels-photo-950902.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=600');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-shadow: 13px 2px 6px rgba(129, 91, 160, 1);
+  color: black;
+  font-family: Didot;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 8px 8px 24px 0px #42445a;
+}
+
+input[type="submit"] {
+  background-color: #defaf8;
+  background-image: linear-gradient(90deg, #defaf8 0%, #d7e0ff 100%);
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+input[type="reset"] {
+  background-color: #defaf8;
+  background-image: linear-gradient(90deg, #defaf8 0%, #d7e0ff 100%);
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.form-group {
+  width: 100%;
+
+}
+
+.container {
+  text-align: center;
+}

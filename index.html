@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Aplikacja ZST</title>
-  <link rel="stylesheet" href="css.css">
+  <link rel="stylesheet" href="style.css">
   <link rel="icon" href="icon.png">
 </head>
 
@@ -12,47 +12,47 @@
   <div class="container">
     <form action="skrypt_rejestracji.php" method="post">
       <div class="form-group">
-        <label for="imie">Imię Aplikującego:</label>
+        <label for="imie">Imię Aplikującego:</label><br>
         <input type="text" name="imie" id="imie" required>
       </div>
       <div class="form-group">
-        <label for="nazwisko">Nazwisko Aplikującego :</label>
+        <label for="nazwisko">Nazwisko Aplikującego:</label><br>
         <input type="text" name="nazwisko" id="nazwisko" required>
       </div>
       <div class="form-group">
-        <label for="data_urodzenia">Data urodzenia Aplikującego:</label>
+        <label for="data_urodzenia">Data urodzenia Aplikującego:</label><br>
         <input type="date" name="data_urodzenia" id="data_urodzenia" required>
       </div>
       <div class="form-group">
-        <label for="adres">Adres Aplikującego:</label>
+        <label for="adres">Adres Aplikującego:</label><br>
         <input type="text" name="adres" id="adres" required>
       </div>
       <div class="form-group">
-        <label for="miejscowosc">Miejscowość Aplikującego:</label>
+        <label for="miejscowosc">Miejscowość Aplikującego:</label><br>
         <input type="text" name="miejscowosc" id="miejscowosc" required>
       </div>
       <div class="form-group">
-        <label for="kod_pocztowy">Kod pocztowy Aplikującego:</label>
+        <label for="kod_pocztowy">Kod pocztowy Aplikującego:</label><br>
         <input type="text" name="kod_pocztowy" id="kod_pocztowy" required>
       </div>
       <div class="form-group">
-        <label for="kontakt_telefoniczny">Numer telefonu Aplikującego:</label>
+        <label for="kontakt_telefoniczny">Numer telefonu Aplikującego:</label><br>
         <input type="tel" name="kontakt_telefoniczny" id="kontakt_telefoniczny" required>
       </div>
       <div class="form-group">
-        <label for="kontakt_rodzica">Numer telefonu rodzica lub opiekuna prawnego:</label>
+        <label for="kontakt_rodzica">Numer telefonu rodzica lub opiekuna prawnego:</label><br>
         <input type="tel" name="kontakt_rodzica" id="kontakt_rodzica" required>
       </div>
       <div class="form-group">
-        <label for="email">Adres e-mail Aplikującego:</label>
+        <label for="email">Adres e-mail Aplikującego:</label><br>
         <input type="email" name="email" id="email" required>
       </div>
       <div class="form-group">
-        <label for="klasa">Wybrany kierunek edukacji:</label>
+        <label for="klasa">Wybrany kierunek edukacji:</label><br>
         <input type="text" name="klasa" id="klasa" required>
       </div>
       <div class="form-group">
-        <input type="submit" value="Zarejestruj">
+        <input type="reset" value="resetuj"> <input type="submit" value="Zarejestruj">
       </div>
     </form>
   </div>

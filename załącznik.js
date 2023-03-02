@@ -5,7 +5,8 @@ emailjs.init('msbVOFrVbpvTZiDRU');
 // Konfiguracja EmailJS (pobierz te informacje ze swojego konta EmailJS)
 const serviceID = 'service_at5x6qs';
 const templateID = 'BaqBwAd_5AENajOFH82uN';
-
+// Znajdź formularz na stronie
+const form = document.querySelector('form');
 // Funkcja do wysyłania e-maila
 function sendEmail(form) {
   // Pobierz wartości z formularza
@@ -27,8 +28,6 @@ function sendEmail(form) {
       console.log('Wystąpił błąd podczas wysyłania e-maila', error);
     });
 }
-// Znajdź formularz na stronie
-const form = document.querySelector('form');
 // Nasłuchuj zdarzenie wysłania formularza i wywołaj funkcję do wysyłania e-maila
 form.addEventListener('submit', (event) => {
   event.preventDefault();

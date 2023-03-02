@@ -2,23 +2,9 @@ form {
   width: 500px;
   margin: 0 auto;
   padding: 100px;   
-  font-family: Didot;
+  text-align: center;
 }
 
-@media only screen and (max-width: 600px) {
-  form {
-  width: 90%;
-  padding: 50px;
-  }
-  input {
-  width: 100%;
-  font-size: 16px;
-  }
-  input[type="submit"] {
-  font-size: 18px;
-  padding: 12px;
-  }
-  }
 
 body {
   background-color: rgb(255, 255, 255);
@@ -27,8 +13,13 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
   text-shadow: 13px 2px 6px rgba(129, 91, 160, 1);
-  color: black;
-  font-family: Didot;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 20px;
+
 }
 
 input {
@@ -37,10 +28,11 @@ input {
   margin-bottom: 10px;
   border: 1px solid #ccc;
   text-shadow: 13px 2px 6px rgba(129, 91, 160, 1);
-  color: black;
+  color: #333;
   -webkit-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
   -moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
   box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+  font-size: 20px;
 }
 
 input[type="submit"] {
@@ -49,7 +41,14 @@ input[type="submit"] {
   color: rgb(0, 0, 0);
   border-radius: 20px 20px 20px 20px;
   cursor: pointer;
-  font-family: Didot;
   font-size: 20px;
 }
 
+.footer {
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+  
+  font-size: 20px;
+}

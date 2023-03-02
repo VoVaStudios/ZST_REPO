@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Aplikacja ZST</title>
+  <link rel="stylesheet" href="css.css">
+  <link rel="icon" href="icon.png">
+
+</head>
+
+<body>
+  <div class="container">
+    <form action="skrypt_rejestracji.php" method="post">
+      <div class="form-group">
+        <label for="imie">Imię Aplikującego:</label>
+        <input type="text" name="imie" id="imie" required>
+      </div>
+      <div class="form-group">
+        <label for="nazwisko">Nazwisko Aplikującego :</label>
+        <input type="text" name="nazwisko" id="nazwisko" required>
+      </div>
+      <div class="form-group">
+        <label for="data_urodzenia">Data urodzenia Aplikującego:</label>
+        <input type="date" name="data_urodzenia" id="data_urodzenia" required>
+      </div>
+      <div class="form-group">
+        <label for="adres">Adres Aplikującego:</label>
+        <input type="text" name="adres" id="adres" required>
+      </div>
+      <div class="form-group">
+        <label for="miejscowosc">Miejscowość Aplikującego:</label>
+        <input type="text" name="miejscowosc" id="miejscowosc" required>
+      </div>
+      <div class="form-group">
+        <label for="kod_pocztowy">Kod pocztowy Aplikującego:</label>
+        <input type="text" name="kod_pocztowy" id="kod_pocztowy" required>
+      </div>
+      <div class="form-group">
+        <label for="kontakt_telefoniczny">Numer telefonu Aplikującego:</label>
+        <input type="tel" name="kontakt_telefoniczny" id="kontakt_telefoniczny" required>
+      </div>
+      <div class="form-group">
+        <label for="kontakt_rodzica">Numer telefonu rodzica lub opiekuna prawnego:</label>
+        <input type="tel" name="kontakt_rodzica" id="kontakt_rodzica" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Adres e-mail Aplikującego:</label>
+        <input type="email" name="email" id="email" required>
+      </div>
+      <div class="form-group">
+        <label for="klasa">Wybrany kierunek edukacji:</label>
+        <input type="text" name="klasa" id="klasa" required>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Zarejestruj">
+      </div>
+    </form>
+  </div>
+
+
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+  <script>
+    function resize() {
+      const windowHeight = window.innerHeight;
+      const windowWidth = window.innerWidth;
+      const container = document.querySelector('.container');
+      container.style.height = `${windowHeight}px`;
+    }
+
+    window.addEventListener('resize', resize);
+    // importuj potrzebne biblioteki z EmailJS
+    emailjs.init('msbVOFrVbpvTZiDRU');
+
+    // Konfiguracja EmailJS (pobierz te informacje ze swojego konta EmailJS)
+    const serviceID = 'service_at5x6qs';
+    const templateID = 'BaqBwAd_5AENajOFH82uN';
+
+    // Funkcja do wysyłania e-maila
+    function sendEmail(form) {
+      // Pobierz wartości z formularza
+      const name = form.imie.value;
+      const surname = form.nazwisko.value;
+      const email = form.email.value;
+      const message = form.klasa.value;
+
+      // Skonfiguruj i wyślij e-mail
+      emailjs.send(service_at5x6qs, BaqBwAd_5AENajOFH82uN, {
+        from_name: `${name} ${surname}`,
+        from_email: 'mmmmsuport@gmail.com',
+        message: siema
+      })
+        .then((response) => {
+          console.log('E-mail został wysłany', response);
+        })
+        .catch((error) => {
+          console.log('Wystąpił błąd podczas wysyłania e-maila', error);
+        });
+    }
+
+    // Znajdź formularz na stronie
+    const form = document.querySelector('form');
+
+    // Nasłuchuj zdarzenie wysłania formularza i wywołaj funkcję do wysyłania e-maila
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      sendEmail(form);
+    })
+  </script>
+
+</body>
+
+</html> 

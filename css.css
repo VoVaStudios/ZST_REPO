@@ -2,7 +2,23 @@ form {
   width: 500px;
   margin: 0 auto;
   padding: 100px;   
+  font-family: Didot;
 }
+
+@media only screen and (max-width: 600px) {
+  form {
+  width: 90%;
+  padding: 50px;
+  }
+  input {
+  width: 100%;
+  font-size: 16px;
+  }
+  input[type="submit"] {
+  font-size: 18px;
+  padding: 12px;
+  }
+  }
 
 body {
   background-color: rgb(255, 255, 255);
@@ -36,3 +52,4 @@ input[type="submit"] {
   font-family: Didot;
   font-size: 20px;
 }
+

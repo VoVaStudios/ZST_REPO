@@ -5,11 +5,11 @@ form {
 }
 
 body {
-  background-color: rgb(251, 207, 40);
+  background-color: rgb(255, 255, 255);
   background-image: url(https://images.pexels.com/photos/950902/pexels-photo-950902.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=600);
   background-size: cover;
   background-position: center center;
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   text-shadow: 13px 2px 6px rgba(129, 91, 160, 1);
   color: black;
   font-family: Didot;
